@@ -6,6 +6,11 @@ ttlInput.addEventListener("change", (element) => {
   timeInput.value = ttlToTimeFormat(ttl);
 });
 
+timeInput.addEventListener("change", (element) => {
+  const time = element.target.value;
+  ttlInput.value = timeToTtl(time);
+});
+
 const ttlToTimeFormat = (ttl) => {
   let hours = Math.floor(ttl / 3600);
   let minutes = Math.floor((ttl - hours * 3600) / 60);
@@ -16,4 +21,14 @@ const ttlToTimeFormat = (ttl) => {
   if (seconds < 10) seconds = `0${seconds}`;
 
   return `${hours}:${minutes}:${seconds}`;
+};
+
+const timeToTtl = (time) => {
+  const timeArray = time.split(":");
+
+  const hours = parseInt(timeArray[0]);
+  const minutes = parseInt(timeArray[1]);
+  const seconds = timeArray[2] ? parseInt(timeArray[2]) : 0;
+
+  return hours * 3600 + minutes * 60 + seconds;
 };
