@@ -13,16 +13,29 @@
     />
   </head>
   <body>
-    <main class="d-flex flex-column">
-      <h1 class="text-center">DNS TTL Calculator</h1>
-      <div class="d-flex">
-        <input
-          id="ttl-input-number"
-          type="number"
-          class="form-control mx-1"
-          placeholder="TTL"
-        />
-        <input id="ttl-input-time" type="time" class="form-control mx-1" />
+    <main>
+      <h1 class="text-center p-3">DNS TTL Calculator</h1>
+      <div class="d-flex flex-column flex-md-row justify-content-md-around p-4">
+        <div class="d-flex flex-column my-3">
+          <h2 class="text-center">TTL (Time to Live)</h2>
+          <input
+            id="ttl-input-number"
+            type="number"
+            class="form-control mx-auto w-75"
+            placeholder="3600"
+          />
+        </div>
+        <div class="d-none d-md-flex">
+          <span class="iconify my-auto" data-icon="fa-solid:equals"></span>
+        </div>
+        <div class="d-flex flex-column my-3">
+          <h2 class="text-center">Time (hh:mm:ss)</h2>
+          <input
+            id="ttl-input-time"
+            type="time"
+            class="form-control mx-auto w-75"
+          />
+        </div>
       </div>
     </main>
     <script
@@ -30,6 +43,7 @@
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>
