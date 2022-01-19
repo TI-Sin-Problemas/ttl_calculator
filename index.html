@@ -11,8 +11,9 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
-  <body>
+  <body class="bg-dark text-light">
     <main>
       <h1 class="text-center p-3">DNS TTL Calculator</h1>
       <div class="d-flex flex-column flex-md-row justify-content-md-around p-4">
@@ -36,6 +37,27 @@
             class="form-control mx-auto w-75"
           />
         </div>
+      </div>
+      <div class="text-center p-3">
+        <h2>What is TTL?</h2>
+        <p>
+          TTL or Time To Live in DNS is a numerical value set in a DNS record on
+          the authoritative domain name server for de domain.
+        </p>
+        <p>
+          It defines the number of seconds that a cache server can provide its
+          cached value for the record. When the defined number of seconds have
+          passed since the last refresh, the caching server will reach out to
+          the authoritative server again and receive the current -- and possibly
+          changed -- value for the record.
+        </p>
+        <small
+          >Definition taken from
+          <a
+            href="https://www.techtarget.com/searchnetworking/definition/time-to-live"
+            >techtarget.com</a
+          ></small
+        >
       </div>
     </main>
     <script
