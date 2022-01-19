@@ -32,3 +32,6 @@ const timeToTtl = (time) => {
 
   return hours * 3600 + minutes * 60 + seconds;
 };
+
+const now = new Date();
+document.getElementById("copyright-year").innerText = now.getFullYear();
